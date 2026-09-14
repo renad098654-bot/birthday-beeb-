@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6eee5">
+  <meta name="description" content="A little birthday surprise">
+  <title>𐙚 Birthday Surprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="paper-grain"></div>
+  <div id="fx" aria-hidden="true"></div>
+
+  <main class="site">
+    <!-- 01 — INTRO -->
+    <section class="page active" id="page-intro">
+      <div class="corner-ribbon ribbon-top">𐙚</div>
+      <div class="lace lace-top"></div>
+      <div class="intro-card">
+        <div class="tiny-line">a little question for you</div>
+        <div class="kiss">♡</div>
+        <h1>تحبني؟</h1>
+        <p>اضغط إذا كنت مستعد للهديّة</p>
+        <button class="primary-btn pulse" id="startBtn">تحبني؟ 𐙚</button>
+      </div>
+      <div class="pearl pearl-a"></div><div class="pearl pearl-b"></div>
+    </section>
+
+    <!-- 02 — BIRTHDAY -->
+    <section class="page" id="page-birthday">
+      <div class="top-sticker">FOR YOU 𐙚</div>
+      <div class="balloon b1">♡</div><div class="balloon b2">♡</div><div class="balloon b3">♡</div>
+      <div class="birthday-wrap">
+        <div class="script-title">Happy Birthday</div>
+        <h2>كل عام وانت تضيئ سنيني</h2>
+        <div class="divider">୨୧ ───── ♡ ───── ୨୧</div>
+        <p class="soft-note">جهز قلبك… باقي الهدايا تنتظرك.</p>
+        <button class="primary-btn" id="giftsBtn">الهدايا 𐙚</button>
+      </div>
+      <div class="tiny-stars">✦　·　✧　·　✦</div>
+    </section>
+
+    <!-- 03 — GIFTS -->
+    <section class="page" id="page-gifts">
+      <div class="section-heading">
+        <span>little presents</span>
+        <h2>هدايا لك ♡</h2>
+        <small>افتحهم وحدة وحدة… لا تستعجل.</small>
+      </div>
+      <div class="gifts-grid">
+        <button class="gift gift-1" data-gift="1"><span class="gift-no">01</span><span class="box">🎁</span><span>افتحني</span></button>
+        <button class="gift gift-2" data-gift="2"><span class="gift-no">02</span><span class="box">🎁</span><span>افتحني</span></button>
+        <button class="gift gift-3" data-gift="3"><span class="gift-no">03</span><span class="box">🎁</span><span>افتحني</span></button>
+        <button class="gift gift-4" data-gift="4"><span class="gift-no">04</span><span class="box">🎁</span><span>افتحني</span></button>
+        <button class="gift gift-5 big-gift" data-gift="5">
+          <span class="gift-no">05</span>
+          <span class="lock-chain">⛓</span>
+          <span class="box">🎁</span>
+          <span class="dial">1214</span>
+          <span>الهدية الأخيرة</span>
+        </button>
+      </div>
+      <button class="back-link" data-back="page-birthday">رجوع</button>
+    </section>
+
+    <!-- 04 — MESSAGE 1 -->
+    <section class="page message-page" id="page-message1">
+      <article class="letter">
+        <div class="stamp">01</div>
+        <div class="letter-flower">✿</div>
+        <p>هاي حبوبي هابيي بيرثديي تو يو يروحي كل عام وانت بالف خير كل عام و الحياة تضحك لك و حلوه زيك و زي حلاوتك كل عام ونحن سوا ومايفرقنا شيء اتمنى تكبر بسعادة</p>
+        <div class="signature">من حبوبتك ♡</div>
+      </article>
+      <button class="primary-btn" data-back="page-gifts">رجوع للهدايا</button>
+    </section>
+
+    <!-- 05 — GIFT 2 QUESTION -->
+    <section class="page question-page" id="page-q2">
+      <div class="question-card">
+        <span class="mini-number">02</span>
+        <div class="question-mark">?</div>
+        <h2>تذكر كيف كانت أول رسالة بيننا؟ وإيش صار بالضبط؟</h2>
+        <p class="hint">اكتب اللي تتذكره… فيه تلميح صغير إذا احتجت.</p>
+        <input id="answer2" type="text" autocomplete="off" placeholder="اكتب إجابتك هنا">
+        <button class="primary-btn" id="check2">فتح الهدية</button>
+        <button class="ghost-btn" id="hint2">أعطني تلميح</button>
+        <div class="feedback" id="feedback2"></div>
+      </div>
+      <button class="back-link" data-back="page-gifts">رجوع</button>
+    </section>
+
+    <!-- 06 — MESSAGE 2 -->
+    <section class="page message-page" id="page-message2">
+      <article class="letter">
+        <div class="stamp">02</div>
+        <div class="letter-flower">♡</div>
+        <p>تحسب خلصنا ؟ لسا يزوجي باقي وراك مشوار كبير تذكر اول شيء صار بيننا ؟ كنت اهددك ومافحياتي توقعت اني رح اطيح في حب الشخص اللي هددتو و كان افضل قرار سويتو فحياتي اني حبيتك و اليوم اعبرلك عن مشاعري في عيدميلادك</p>
+        <div class="signature">ذكرياتنا الأولى… ♡</div>
+      </article>
+      <button class="primary-btn" data-back="page-gifts">رجوع للهدايا</button>
+    </section>
+
+    <!-- 07 — MESSAGE 3 -->
+    <section class="page message-page" id="page-message3">
+      <article class="letter">
+        <div class="stamp">03</div>
+        <div class="letter-flower">✿</div>
+        <p>دايم الحياة تعطي الناس نعم بس الفرق النعم تكون هيئتها مختلفة وانا نعمتي من هالدنيا هو انت و وجودك في حياتي من اعظم الاشياء و احبها لقلبي انت فكل عام وانت حبي وكل عام وانت تنورني</p>
+        <div class="signature">نعمتي الحلوة ♡</div>
+      </article>
+      <button class="primary-btn" data-back="page-gifts">رجوع للهدايا</button>
+    </section>
+
+    <!-- 08 — GIFT 4 QUESTION -->
+    <section class="page question-page" id="page-q4">
+      <div class="question-card">
+        <span class="mini-number">04</span>
+        <div class="question-mark">♡</div>
+        <h2>وش اكتر شيء يخوفني ؟</h2>
+        <div class="answers">
+          <button data-answer="A">A — الظلام</button>
+          <button data-answer="B">B — القطط</button>
+          <button data-answer="C">C — الوحوش</button>
+          <button data-answer="D">D — فقدانك</button>
+        </div>
+        <div class="feedback" id="feedback4"></div>
+      </div>
+      <button class="back-link" data-back="page-gifts">رجوع</button>
+    </section>
+
+    <!-- 09 — GIFT 4 POPUP -->
+    <section class="page" id="page-q4popup">
+      <div class="modal-card">
+        <div class="modal-heart">♡</div>
+        <h2>اجل لاتخليني افقدك 𑣲⋆</h2>
+        <button class="primary-btn" id="dontLose">ماحتفقديني ᨳଓ</button>
+      </div>
+    </section>
+
+    <!-- 10 — GIFT 5 CODE -->
+    <section class="page question-page" id="page-code">
+      <div class="code-card">
+        <div class="chain-big">⛓</div>
+        <div class="code-lock">♙</div>
+        <h2>ENTER THE CODE</h2>
+        <p>افتحي القفل… الرقم بينك وبينه ذكرى.</p>
+        <div class="code-dots" id="codeDots">• • • •</div>
+        <input id="codeInput" inputmode="numeric" maxlength="4" placeholder="••••" aria-label="code">
+        <button class="primary-btn" id="checkCode">UNLOCK</button>
+        <div class="feedback" id="codeFeedback"></div>
+        <button class="back-link" data-back="page-gifts">رجوع</button>
+      </div>
+    </section>
+
+    <!-- 11 — CAKE -->
+    <section class="page cake-page" id="page-cake">
+      <div class="cake-note">one more little thing…</div>
+      <h2>22 ♡</h2>
+      <p id="cakeInstruction">اضغط على الشموع عشان تطفيها ✦</p>
+
+      <button class="cake-scene" id="cakeScene" aria-label="تفاعل مع الكيكة">
+        <div class="cake">
+          <div class="candles" id="candles">
+            <span class="candle c1"><i></i></span>
+            <span class="candle c2"><i></i></span>
+            <span class="candle c3"><i></i></span>
+            <span class="candle c4"><i></i></span>
+            <span class="candle c5"><i></i></span>
+          </div>
+          <div class="cake-top"><span>22</span></div>
+          <div class="cake-middle"></div>
+          <div class="cake-bottom"></div>
+          <div class="cream cream-1"></div><div class="cream cream-2"></div><div class="cream cream-3"></div>
+          <div class="cherry ch1">●</div><div class="cherry ch2">●</div><div class="cherry ch3">●</div>
+          <div class="slice-eaten" id="sliceEaten"></div>
+        </div>
+      </button>
+      <div class="cake-meter"><span id="cakeMeter"></span></div>
+    </section>
+
+    <!-- 12 — CAKE QUESTION -->
+    <section class="page question-page" id="page-cake-q">
+      <div class="question-card cake-q">
+        <div class="mini-number">♡</div>
+        <h2>عجبتك كيكتي؟</h2>
+        <div class="yes-no">
+          <button id="cakeYes">إيه ♡</button>
+          <button id="cakeNo">لا</button>
+        </div>
+        <div class="feedback" id="cakeFeedback"></div>
+      </div>
+    </section>
+
+    <!-- 13 — FINAL -->
+    <section class="page final-page" id="page-final">
+      <article class="final-letter">
+        <div class="final-top">TO MY FAVORITE PERSON</div>
+        <p>يمكن دي آخر هدية بس هي اكتر هدية كنت ابي اوصلها لك لان مهما كتبت ومهما حاولت اوصف لك حبي لك و مكانتك عندي الكلام دايم يقصر عن اللي فقلبي لك ماكنت ادري ان شخص دخل حياتي بطريقة ما كنت اتوقعها ابداً يصير بعدها جزء من ايامي وتفاصيل حياتي و دنيتي تدري اني احب وجودك معايا احب تفاصيلك احب سوالفنا حتى احب الاشياء الصغيرة اللي يمكن انت ما تنتبه لها بس انا حافظتها فقلبي واليوم صار ميلادك ما اتمنى لك بس سنة حلوة اتمنى لك عمر مليان سعادة و راحة وحب واتمنى تكون محقق كل شيء تتمناه وتبيه اتمنى اكون من هالاشخاص اللي يشاركونك هالايام الحلوة فحياتك و المُره بعد الله لايجيبها لحياتك بس حتى لو ظهرت ايام مُره تذكر اني موجودة جنبك في كل خطوة احبك اححبك رغم المسافة اللي بيننا و المشاكل بس دايم احس حبي لك يزيد ماينقص ولا يقل و كنت احس انك دايم قريب لقلبي مو بعيد اتمنى مهما عدت الايام و مشت نبقى مع بعض و يبقى مكاني فقلبك و مكانك فقلبي مايتغير مع مرور الزمن كل عام وانتت حبيبيي و دنيتيي كل عامم وانا محظوظه فيك اكترر من قبل</p>
+        <div class="final-sign">عيد ميلاد سعيد يا حبوبي .<br><strong>من حبوبتك</strong></div>
+        <button class="primary-btn" id="endBtn">اضغط هنا ݁ ˖Ი𐑼⋆</button>
+      </article>
+    </section>
+
+    <!-- 14 — END / MUSIC -->
+    <section class="page end-page" id="page-end">
+      <div class="celebrate-title">for you, always ♡</div>
+      <div class="record-wrap">
+        <button class="record" id="recordBtn" aria-label="تشغيل الأغنية">
+          <div class="record-label"><img src="assets/childhood.jpg" alt="صورة الطفولة"></div>
+          <div class="record-shine"></div>
+        </button>
+        <div class="needle"></div>
+      </div>
+      <p class="record-tip" id="recordTip">اضغط على الأسطوانة ♫</p>
+      <audio id="song" preload="metadata" controls class="audio-player">
+        <source src="assets/song.mp3" type="audio/mpeg">
+      </audio>
+      <div class="song-fallback">إذا ما أضفتِ ملف <b>song.mp3</b>، الزر يفتح رابط TikTok المرفق.</div>
+      <small class="lyric-snippet">I love you like a love song, baby</small>
+      <div class="the-end">𑣲⋆THE END</div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
